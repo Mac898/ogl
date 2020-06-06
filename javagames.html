@@ -45,6 +45,18 @@
 
 <body>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+                $notification = $delete.parentNode;
+
+                $delete.addEventListener('click', () => {
+                    $notification.parentNode.removeChild($notification);
+                });
+            });
+        });
+    </script>
+
     <section class="hero is-danger is-bold is-small">
         <div class="hero-body">
             <div class="container has-text-centered">
@@ -53,10 +65,10 @@
         </div>
         <div class="tabs is-fullwidth is-boxed">
             <ul>
-              <li><a href="html5games">HTML5 Games</a></li>
-              <li class="is-active"><a>Java Games</a></li>
+                <li><a href="html5games">HTML5 Games</a></li>
+                <li class="is-active"><a>Java Games</a></li>
             </ul>
-          </div>
+        </div>
     </section>
 
     <div class="container">
